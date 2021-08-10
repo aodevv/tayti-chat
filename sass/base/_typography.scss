@@ -1,0 +1,48 @@
+.left__wrapper {
+  color: red;
+  font-size: 2rem;
+}
+
+.icons__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--font {
+    list-style: none;
+    font-size: 2.4rem;
+    width: 5.6rem;
+    height: 5.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    a {
+      text-decoration: none;
+      color: $color-grey-light-1;
+      //font-size: 6rem;
+      i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  &--active {
+    color: red;
+    //color: #7269ef;
+    background-color: #f7f7ff;
+    border-radius: 5px;
+
+    a {
+      color: #7269ef;
+    }
+  }
+}
+
+.heading-primary {
+  color: #495057;
+  font-size: 2.1rem;
+  font-weight: 600;
+}

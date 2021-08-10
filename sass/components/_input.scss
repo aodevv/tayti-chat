@@ -1,0 +1,13 @@
+.basic-input {
+  padding: 0.8rem 1.6rem;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #e6ebf5;
+  border: 1px solid #e6ebf5;
+  line-height: 1.5;
+
+  &:focus {
+    outline: none;
+  }
+}
