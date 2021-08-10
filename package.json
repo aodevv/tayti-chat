@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.37.5"
+  },
+  "dependencies": {
+    "remixicon": "^2.5.0"
   }
 }

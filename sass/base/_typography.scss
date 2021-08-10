@@ -16,7 +16,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
     a {
       text-decoration: none;
       color: $color-grey-light-1;
@@ -44,5 +43,11 @@
 .heading-primary {
   color: #495057;
   font-size: 2.1rem;
+  font-weight: 600;
+}
+
+.heading-secondary {
+  color: $color-grey-dark;
+  font-size: 1.3rem;
   font-weight: 600;
 }
