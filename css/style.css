@@ -492,6 +492,7 @@ body {
 }
 .right__center ul .right-chat .text__wrap--content .chat-time {
   color: #7a7f9a !important;
+  text-align: left !important;
 }
 .right__center ul .right-chat .text__wrap--content::after {
   left: 100% !important;
