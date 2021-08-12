@@ -32,7 +32,7 @@
         }
       }
 
-      &--center{
+      &--center {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -61,92 +61,11 @@
   .center {
     width: 38.8rem;
     background: #f5f7fb;
-
-    &__wrapper {
-      &--top {
-        padding: 2.5rem;
-
-        .search-input {
-          display: flex;
-          align-items: center;
-
-          span {
-            position: relative;
-            width: 10%;
-            height: 3.9rem;
-            background-color: #e6ebf5;
-            border-radius: 5px 0px 0px 5px;
-
-            i {
-              position: absolute;
-              top: 50%;
-              transform: translateY(-50%);
-              right: 2px;
-              font-size: 1.8rem;
-            }
-          }
-          input {
-            border-radius: 0 5px 5px 0;
-          }
-        }
-      }
-
-      .users-carousel {
-
-        ul {
-          color: transparent;
-          overflow-x: scroll;
-          display: flex;
-          transition: color 0.3s ease;
-
-          li {
-            list-style: none;
-            width: 7rem;
-            background-color: $color-grey-light-2;
-            border-radius: 0.8rem;
-            flex: none;
-            padding: 0.8rem;
-            text-align: center;
-            position: relative;
-            margin: 1.6rem 0.8rem 0 0;
-
-            .user-carousel__thumbnail{
-              position: absolute;
-              top: -1.5rem;
-              right: 50%;
-              transform: translateX(50%);
-              z-index: 2;
-            }
-
-            h2{
-              margin:1.6rem 0 0.4rem 0 ;
-            }
-          }
-
-          &::-webkit-scrollbar,
-          &::-webkit-scrollbar-thumb{
-            height: 1.3rem;
-            //width: 1rem;
-            background-clip: padding-box;
-            border-radius: 13px;
-            border: 4px solid transparent;
-           
-          }
-          &::-webkit-scrollbar-thumb {  
-            box-shadow: inset 0 0 0 4px;
-          }
-
-          &:hover{
-            color: rgba(128, 128, 128, 0.726);
-          }
-          
-        }
-      }
-    }
   }
 
   .right {
     width: calc(100% - 46.3rem);
-    background: blueviolet;
+    background: white;
+    box-shadow: 0 2px 4px rgb(15 34 58 / 12%);
   }
 }

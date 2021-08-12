@@ -1,15 +1,35 @@
 .u-center-text {
-  text-align: center;
+  text-align: center !important;
 }
 
 .u-mb-l {
-  margin-bottom: 8rem;
+  margin-bottom: 8rem !important;
 }
 
 .u-mb-m {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 
 .u-mb-s {
-  margin-bottom: 2.4rem;
+  margin-bottom: 2.4rem !important;
+}
+
+.u-mb-xs {
+  margin-bottom: 0.4rem !important;
+}
+
+.u-px-1 {
+  padding: 0 1.6rem !important;
+}
+
+.list-unstyled {
+  list-style: none !important;
+}
+
+.no-decoration {
+  text-decoration: none !important;
+}
+
+.u-font-xs {
+  font-size: 1.1rem !important;
 }
