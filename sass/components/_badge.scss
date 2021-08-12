@@ -5,3 +5,18 @@
   background-color: $color-red-pink-light;
   color: $color-red-pink;
 }
+
+
+.badge{
+  width: .8rem;
+  height: .8rem;
+  border-radius: 50%;
+  &-online{
+    background-color: $color-online;
+  }
+  &-offline{
+    background-color: $color-grey-dark-2;
+  }
+  
+}
+
