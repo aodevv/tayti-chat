@@ -17,6 +17,22 @@
     border: 2px solid white;
 
   }
+
+  .thumbnail-container{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    //background-color: violet;
+    img{
+      position: absolute;
+      width: 3.5rem;
+      //visibility: hidden;
+    }
+  }
+
+  
 }
 
 .online{

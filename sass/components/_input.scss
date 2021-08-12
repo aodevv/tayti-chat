@@ -1,5 +1,5 @@
 .basic-input {
-  padding: 0.8rem 1.6rem;
+  padding: 1rem 1.6rem;
   font-size: 1.4rem;
   border-radius: 5px;
   width: 100%;
@@ -10,4 +10,8 @@
   &:focus {
     outline: none;
   }
+  &::-webkit-input-placeholder{
+    color: $color-grey-dark-2;
+    font-family: "Public Sans", sans-serif;
+}
 }

@@ -78,10 +78,16 @@
   }
 
   &--bottom {
-    padding: 0 0.8rem;
+    padding: 0 0rem 0 1.3rem;
     .chat-list {
       display: flex;
       flex-direction: column;
+      overflow-y: scroll;
+    max-height: calc(100vh - 274px);
+    color: transparent;
+    transition: color .3s ease;
+    transition-delay: .6s;
+
 
       li {
         a {
@@ -125,6 +131,23 @@
           background-color: $color-grey-light-2;
         }
       }
+
+      &::-webkit-scrollbar,
+      &::-webkit-scrollbar-thumb {
+        height: 1.3rem;
+        //width: 1rem;
+        background-clip: padding-box;
+        border-radius: 13px;
+        border: 5px solid transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 0 5px;
+      }
+
+      &:hover {
+        color: rgba(128, 128, 128, 0.726);
+        transition: color .3s ease;
+      }
     }
   }
 }
@@ -143,13 +166,19 @@
   }
 
   &__center{
-    height: calc(100vh-184px);
-    max-height: 100%;
+    height: calc(100vh - 177px);
+  max-height: 100%;
     position: relative;
     padding: 2.4rem;
-    overflow: hidden;
+    overflow-y: scroll;
+    color: transparent;
+    transition: color .4s;
+    transition-delay: .5s;
 
     ul{
+      //overflow-y: hidden;
+      display: flex;
+      flex-direction: column;
       li{
         clear: both;
 
@@ -233,15 +262,59 @@
         }
       }
     }
+
+    &::-webkit-scrollbar,
+      &::-webkit-scrollbar-thumb {
+        height: 1.3rem;
+        //width: 1rem;
+        background-clip: padding-box;
+        border-radius: 13px;
+        border: 5px solid transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 0 4px;
+      }
+
+      &:hover {
+        color: rgba(128, 128, 128, 0.726);
+        transition: color .3s ease;
+      }
   }
 
   &__bottom{
-    padding: 1.5rem;
+    padding: 2.4rem;
     border-top: 1px solid $color-white-2;
     display: flex;
+    form{
+      display: inherit;
+      width: 100%;
+      align-items: flex-end;
+    }
 
     .input-message{
       flex: 1;
     }
+
+    .chat-btns{
+      padding: 0 1.2rem;
+
+      .input-btn{
+        padding: 1rem 1.6rem;
+        position: relative;
+        color: white;
+        border: none;
+        font-size: 1.6rem;
+        border-radius: .7rem;
+        background-color: $color-primary-light;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 1.5;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+
+    
   }
 }
