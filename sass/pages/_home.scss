@@ -181,6 +181,7 @@
       flex-direction: column;
       li{
         clear: both;
+        transition: .4s;
 
         .conversation-item{
           display: inline-flex;

@@ -473,6 +473,7 @@ body {
 }
 .right__center ul li {
   clear: both;
+  transition: 0.4s;
 }
 .right__center ul li .conversation-item {
   display: inline-flex;
