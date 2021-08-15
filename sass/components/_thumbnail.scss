@@ -5,7 +5,7 @@
   border-radius: 2rem;
   position: relative;
 
-  &__status{
+  &__status {
     position: absolute;
     width: 1rem;
     height: 1rem;
@@ -15,31 +15,28 @@
     right: 0;
     z-index: 2;
     border: 2px solid white;
-
   }
 
-  .thumbnail-container{
+  .thumbnail-container {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
     //background-color: violet;
-    img{
+    img {
       position: absolute;
+      left: 0;
       width: 3.5rem;
       //visibility: hidden;
     }
   }
-
-  
 }
 
-.online{
+.online {
   background-color: $color-online;
 }
 
-.away{
+.away {
   background-color: $color-away;
 }
-

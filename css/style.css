@@ -197,6 +197,7 @@ body {
 }
 .user-thumbnail .thumbnail-container img {
   position: absolute;
+  left: 0;
   width: 3.5rem;
 }
 
