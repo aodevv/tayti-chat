@@ -17,3 +17,24 @@
     animation-delay: -0.9s;
   }
 }
+
+.spinner {
+  position: absolute;
+  height: calc(100vh - 177px);
+  width: 100%;
+  background-color: transparent;
+  top: 100%;
+  //top: calc((100vh - 177px) / 2 + 4.2rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  i {
+    font-size: 8rem;
+    color: $color-grey-dark-3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate 1s linear infinite;
+  }
+}

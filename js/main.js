@@ -1,3 +1,11 @@
+//Contacts CONTROLLER
+var contactsController = (function(){
+    var Contact = function(id, name){
+        this.id = id;
+        this.name = name;
+    }
+})();
+
 // ChAT CONTROLLER
 var chatController = (function () {
     var Message = function(value, time){

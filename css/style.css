@@ -45,6 +45,14 @@ body {
     transform: translateY(0);
   }
 }
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 .left__wrapper {
   color: red;
   font-size: 2rem;
@@ -165,6 +173,10 @@ body {
   visibility: hidden;
 }
 
+.d-none {
+  display: none;
+}
+
 .px-s {
   padding-left: 1.2rem;
   padding-right: 1.2rem;
@@ -261,6 +273,26 @@ body {
 }
 .dot:last-child {
   animation-delay: -0.9s;
+}
+
+.spinner {
+  position: absolute;
+  height: calc(100vh - 177px);
+  width: 100%;
+  background-color: transparent;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+.spinner i {
+  font-size: 8rem;
+  color: #343a40;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate 1s linear infinite;
 }
 
 .grid {
@@ -453,6 +485,7 @@ body {
   padding: 2.4rem;
   display: flex;
   border-bottom: 1px solid #f0eff5;
+  position: relative;
 }
 .right__top--left {
   display: flex;
