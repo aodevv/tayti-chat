@@ -1,0 +1,31 @@
+.user-thumbnail__popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  min-width: 16rem;
+  padding: 0.3rem 0;
+  color: $color-grey-dark;
+  border: 1px solid $color-white-2;
+  background-color: $color-white;
+  border-radius: 6px;
+  box-shadow: 0 0.6rem 2rem rgba($color-black, 0.2);
+  transform: translate(5%, -60%);
+  transition: 0.5s;
+
+  &--logout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-decoration: none;
+    color: $color-grey-dark-4;
+    padding: 0.55rem 2.4rem;
+    font-size: 1.5rem;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: $color-grey-light-2;
+    }
+  }
+}

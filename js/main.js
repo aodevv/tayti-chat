@@ -34,7 +34,9 @@ var UIController = (function () {
         msgBtn: '.msg-btn',
         msgText: '.msg-input',
         chatList: '.message-list',
-        chatContainer: '.right__center'
+        chatContainer: '.right__center',
+        blThumbnail: '.settings-thumbnail', //Bottom left user thumbnail
+        logoutPopup: '.logout-popup' //Bottom left user thumbnail
     }
     
     return{
@@ -97,6 +99,26 @@ var UIController = (function () {
             chatScroll.scrollTop = chatScroll.scrollHeight;
         },
 
+        toggleLogoutPopup: function(){
+            var popup = document.querySelector(DOMstrings.logoutPopup);
+            //popup.classList.toggle("d-none");
+            if(popup.classList.contains("d-none")){
+                popup.classList.remove("d-none");
+                //popup.style.opacity = "1";
+                setTimeout(function(){
+                popup.style.opacity = "1";
+                popup.style.transform = "translate(5%, -70%)"
+            }, 10);
+            }else{
+                popup.style.opacity = "0";
+                 setTimeout(function(){
+                popup.classList.add("d-none");
+                popup.style.transform = "translate(5%, -60%)"
+            }, 500);
+            }
+
+        },
+
 
         getDOMstrings: function(){
             return DOMstrings;
@@ -123,6 +145,7 @@ var controller = (function (Cc, UIC) {
                 ctrlAddItem();
             }
         });
+        document.querySelector(DOM.blThumbnail).addEventListener("click", ctrlTogglePopup);
     }
 
     var ctrlAddChatMsg = () => {
@@ -142,6 +165,11 @@ var controller = (function (Cc, UIC) {
             UIC.clearMessageInput();
 
         }
+    }
+
+    var ctrlTogglePopup = () => {
+        UIC.toggleLogoutPopup();
+
     }
 
 
