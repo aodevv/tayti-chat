@@ -2,7 +2,7 @@
   width: 3.5rem;
   height: 3.5rem;
   background-color: rgba(45, 45, 255, 0.699);
-  border-radius: 2rem;
+  border-radius: 50%;
   position: relative;
 
   &__status {
@@ -17,6 +17,27 @@
     border: 2px solid white;
   }
 
+  &__edit {
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    width: 3.6rem;
+    height: 3.6rem;
+    z-index: 5;
+    font-size: 1.5rem;
+    color: $color-grey-dark;
+    background-color: $color-grey-light-2;
+    border-radius: 100%;
+    @include flexCenter;
+    box-shadow: 0 0.2rem 1rem rgba($color-black, 0.2);
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: $color-grey-purple-2;
+    }
+  }
+
   .thumbnail-container {
     width: 3.5rem;
     height: 3.5rem;
@@ -29,6 +50,21 @@
       left: 0;
       width: 3.5rem;
       //visibility: hidden;
+    }
+  }
+
+  &--big {
+    width: 8.6rem;
+    height: 8.6rem;
+
+    .thumbnail-container {
+      width: 8.6rem;
+      height: 8.6rem;
+      img {
+        position: absolute;
+        left: 0;
+        width: 8.6rem;
+      }
     }
   }
 }

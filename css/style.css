@@ -113,6 +113,11 @@ body {
   color: #7a7f9a;
 }
 
+.text-muted {
+  font-size: 1.5rem;
+  color: #7a7f9a;
+}
+
 .u-center-text {
   text-align: center !important;
 }
@@ -186,7 +191,7 @@ body {
   width: 3.5rem;
   height: 3.5rem;
   background-color: rgba(45, 45, 255, 0.699);
-  border-radius: 2rem;
+  border-radius: 50%;
   position: relative;
 }
 .user-thumbnail__status {
@@ -200,6 +205,27 @@ body {
   z-index: 2;
   border: 2px solid white;
 }
+.user-thumbnail__edit {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  width: 3.6rem;
+  height: 3.6rem;
+  z-index: 5;
+  font-size: 1.5rem;
+  color: #495057;
+  background-color: #e6ebf5;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.user-thumbnail__edit:hover {
+  background-color: #c2cee6;
+}
 .user-thumbnail .thumbnail-container {
   width: 3.5rem;
   height: 3.5rem;
@@ -211,6 +237,19 @@ body {
   position: absolute;
   left: 0;
   width: 3.5rem;
+}
+.user-thumbnail--big {
+  width: 8.6rem;
+  height: 8.6rem;
+}
+.user-thumbnail--big .thumbnail-container {
+  width: 8.6rem;
+  height: 8.6rem;
+}
+.user-thumbnail--big .thumbnail-container img {
+  position: absolute;
+  left: 0;
+  width: 8.6rem;
 }
 
 .online {
@@ -405,9 +444,10 @@ body {
   top: 0;
   left: 0;
   z-index: 10;
-  font-size: 12rem;
+  font-size: 6rem;
   height: 100%;
   width: 100%;
+  text-align: center;
 }
 
 .user-profil {
@@ -415,9 +455,27 @@ body {
   top: 0;
   left: 0;
   z-index: 12;
-  font-size: 12rem;
   height: 100%;
   width: 100%;
+  padding: 2.5rem;
+  padding-bottom: 1rem;
+}
+.user-profil__top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-profil__top--status {
+  display: flex;
+  align-items: center;
+}
+.user-profil__top--status div {
+  margin-right: 1rem;
+  display: inline-block;
+}
+.user-profil__top--status p {
+  display: inline-block;
 }
 
 .center__wrapper {

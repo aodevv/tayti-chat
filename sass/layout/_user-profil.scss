@@ -3,8 +3,31 @@
   top: 0;
   left: 0;
   z-index: 12;
-  font-size: 12rem;
-  //background-color: aquamarine;
   height: 100%;
   width: 100%;
+  padding: 2.5rem;
+  padding-bottom: 1rem;
+
+  &__top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--thumbnail {
+      //display: inline-block;
+    }
+
+    &--status {
+      display: flex;
+      align-items: center;
+      div {
+        margin-right: 1rem;
+        display: inline-block;
+      }
+      p {
+        display: inline-block;
+      }
+    }
+  }
 }

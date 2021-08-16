@@ -43,7 +43,6 @@ var UIController = (function () {
     var centerChildren = document.querySelector(
       DOMstrings.centerContainer
     ).children;
-    console.log(centerChildren);
     [...centerChildren].forEach((el) => {
       el.classList.add("d-none");
     });
@@ -135,22 +134,31 @@ var UIController = (function () {
     },
 
     toggleCenterTabs: function (target) {
+      //1. check if click target is an i element
       if (target.tagName == "I") {
+        //2. check if target grandfather is already the active btn
         if (
           !target.parentNode.parentNode.classList.contains(
             "icons__wrapper--active"
           )
         ) {
+          //3. get the list of children btns and the id of the currently selected btn in order to remove the active class from any previous btn and add it to the current clicked
           var btnList = document.querySelector(DOMstrings.leftBtnList).children;
           var id = target.parentNode.parentNode.id;
 
+          //4. loop throught btns to remove the active class
           for (var i = 0; i < btnList.length; i++) {
             if (btnList[i].classList.contains("icons__wrapper--active"))
               btnList[i].classList.remove("icons__wrapper--active");
           }
+
+          //5. add the active class to the current clicked btn
           target.parentNode.parentNode.classList.add("icons__wrapper--active");
+
+          //6. display the appropriate window for the selected btn
           clearCenter();
-          document.querySelector(`.${id}`).classList.remove("d-none");
+          if (document.querySelector(`.${id}`))
+            document.querySelector(`.${id}`).classList.remove("d-none");
         }
       }
     },
