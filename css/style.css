@@ -299,7 +299,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 4;
+  z-index: 20;
   min-width: 16rem;
   padding: 0.3rem 0;
   color: #495057;
@@ -307,8 +307,10 @@ body {
   background-color: #fff;
   border-radius: 6px;
   box-shadow: 0 0.6rem 2rem rgba(0, 0, 0, 0.2);
-  transform: translate(5%, -60%);
-  transition: 0.5s;
+  transform: translate(5%, -40%);
+  transition: opacity 0.3s, transform 0.5s 0.2s;
+  opacity: 0;
+  visibility: hidden;
 }
 .user-thumbnail__popup--logout {
   display: flex;
@@ -323,6 +325,12 @@ body {
 }
 .user-thumbnail__popup--logout:hover {
   background-color: #e6ebf5;
+}
+.user-thumbnail__popup--shown {
+  opacity: 1;
+  transform: translate(5%, -70%);
+  visibility: visible;
+  transition: 0.3s;
 }
 
 .grid {
@@ -384,6 +392,7 @@ body {
 .grid .center {
   width: 38.8rem;
   background: #f5f7fb;
+  overflow: hidden;
 }
 .grid .right {
   width: calc(100% - 46.3rem);
@@ -391,6 +400,29 @@ body {
   box-shadow: 0 2px 4px rgba(15, 34, 58, 0.12);
 }
 
+.user-settings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  font-size: 12rem;
+  height: 100%;
+  width: 100%;
+}
+
+.user-profil {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  font-size: 12rem;
+  height: 100%;
+  width: 100%;
+}
+
+.center__wrapper {
+  position: relative;
+}
 .center__wrapper--top {
   padding: 2.5rem;
   padding-bottom: 1rem;
@@ -402,7 +434,7 @@ body {
 .center__wrapper--top .search-input span {
   position: relative;
   width: 10%;
-  height: 3.9rem;
+  height: 4.3rem;
   background-color: #e6ebf5;
   border-radius: 5px 0px 0px 5px;
 }
@@ -410,7 +442,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 2px;
+  right: 0;
   font-size: 1.8rem;
 }
 .center__wrapper--top .search-input input {

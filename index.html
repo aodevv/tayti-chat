@@ -27,22 +27,22 @@
                 </div>
                 <div class="left__wrapper--center">
                     <ul class="icons__wrapper">
-                        <li class="icons__wrapper--font">
+                        <li id="user-profil" class="icons__wrapper--font">
                             <a href="#">
                                 <i class="ri-user-2-line"></i>
                             </a>
                         </li>
-                        <li class="icons__wrapper--font icons__wrapper--active">
+                        <li id="user-conversataions" class="icons__wrapper--font icons__wrapper--active">
                             <a href="#">
                                 <i class="ri-message-3-line"></i>
                             </a>
                         </li>
-                        <li class="icons__wrapper--font">
+                        <li id="user-groups" class="icons__wrapper--font">
                             <a href="#">
                                 <i class="ri-group-line"></i>
                             </a>
                         </li>
-                        <li class="icons__wrapper--font">
+                        <li id="user-settings" class="icons__wrapper--font">
                             <a href="#">
                                 <i class="ri-settings-2-line"></i>
                             </a>
@@ -50,7 +50,7 @@
                     </ul>
                 </div>
                 <div class="left__wrapper--bottom">
-                    <div class="user-thumbnail__popup logout-popup d-none">
+                    <div class="user-thumbnail__popup logout-popup">
                         <a href="#" class="user-thumbnail__popup--logout">
                             Logout
                             <i class="ri-logout-circle-r-line"></i>
@@ -67,7 +67,14 @@
         </div>
         <div class="center">
             <div class="center__wrapper">
-                <div class="center__wrapper--top">
+                <div class="user-settings">
+                    Settings
+                </div>
+                <div class="user-profil">
+                    Profil
+                </div>
+                <div class="user-conversataions">
+                    <div class="center__wrapper--top">
                     <h2 class="heading-primary u-mb-s">Chats</h2>
                     <div class="search-input u-mb-s">
                         <span><i class="ri-search-line"></i></span><input type="text" placeholder="Text"
@@ -285,6 +292,8 @@
                         </ul>
                     </div>
                 </div>
+                </div>
+                
             </div>
         </div>
         <div class="right">
