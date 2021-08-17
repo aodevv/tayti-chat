@@ -10,8 +10,32 @@
   &:focus {
     outline: none;
   }
-  &::-webkit-input-placeholder{
+  &::-webkit-input-placeholder {
     color: $color-grey-dark-2;
     font-family: "Public Sans", sans-serif;
+  }
 }
+
+.search-input {
+  display: flex;
+  align-items: center;
+
+  span {
+    position: relative;
+    width: 10%;
+    height: 4.3rem;
+    background-color: #e6ebf5;
+    border-radius: 5px 0px 0px 5px;
+
+    i {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      font-size: 1.8rem;
+    }
+  }
+  input {
+    border-radius: 0 5px 5px 0;
+  }
 }

@@ -37,6 +37,10 @@ var UIController = (function () {
     leftBtnGroup: ".left__wrapper--center",
     leftBtnList: ".icons__wrapper",
     centerContainer: ".center__wrapper",
+    rightContainer: ".right__center",
+    groupContainer: ".group-list",
+    convoName: ".conversation-window-name",
+    groupID: "#group1",
   };
 
   var clearCenter = () => {
@@ -44,6 +48,15 @@ var UIController = (function () {
       DOMstrings.centerContainer
     ).children;
     [...centerChildren].forEach((el) => {
+      el.classList.add("d-none");
+    });
+  };
+
+  var clearRight = () => {
+    var rightChildren = document.querySelector(
+      DOMstrings.rightContainer
+    ).children;
+    [...rightChildren].forEach((el) => {
       el.classList.add("d-none");
     });
   };
@@ -163,6 +176,30 @@ var UIController = (function () {
       }
     },
 
+    addGroupChat: function () {
+      clearRight();
+      document
+        .querySelector(DOMstrings.groupContainer)
+        .classList.remove("d-none");
+    },
+
+    ctrlConversations: function (target) {
+      if (target.classList.contains("chat-name")) {
+        var convoName = target.innerHTML;
+        document.querySelector(DOMstrings.convoName).innerHTML = convoName;
+
+        if (target.parentNode.parentNode.id == "group1") {
+          clearRight();
+          document
+            .querySelector(DOMstrings.groupContainer)
+            .classList.remove("d-none");
+        } else {
+          clearRight();
+          document.querySelector(".users-list").classList.remove("d-none");
+        }
+      }
+    },
+
     getDOMstrings: function () {
       return DOMstrings;
     },
@@ -199,6 +236,14 @@ var controller = (function (Cc, UIC) {
       .addEventListener("click", function (e) {
         ctrlCenterLayout(e.target);
       });
+    document
+      .querySelector(DOM.centerContainer)
+      .addEventListener("click", function (e) {
+        ctrlConversations(e.target);
+      });
+    /* document
+      .querySelector(DOM.groupID)
+      .addEventListener("click", switchToGroupChat); */
   };
 
   var ctrlAddChatMsg = () => {
@@ -223,6 +268,19 @@ var controller = (function (Cc, UIC) {
 
   var ctrlCenterLayout = (target) => {
     UIC.toggleCenterTabs(target);
+  };
+
+  /* var switchToGroupChat = () => {
+    //1. clearchat area
+
+    //2. add new chat
+    UIC.addGroupChat();
+  }; */
+
+  var ctrlConversations = (target) => {
+    //console.log(target);
+    UIC.ctrlConversations(target);
+    UIC.scrollChatContainer();
   };
 
   return {
