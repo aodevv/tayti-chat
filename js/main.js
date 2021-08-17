@@ -30,7 +30,7 @@ var UIController = (function () {
     inputType: ".add__type",
     msgBtn: ".msg-btn",
     msgText: ".msg-input",
-    chatList: ".message-list",
+    chatList: ".messages-list__active",
     chatContainer: ".right__center",
     blThumbnail: ".settings-thumbnail", //Bottom left user thumbnail
     logoutPopup: ".logout-popup", //Bottom left user thumbnail
@@ -193,9 +193,21 @@ var UIController = (function () {
           document
             .querySelector(DOMstrings.groupContainer)
             .classList.remove("d-none");
+          document
+            .querySelector(DOMstrings.groupContainer)
+            .classList.add("messages-list__active");
+          document
+            .querySelector(".users-list")
+            .classList.remove("messages-list__active");
         } else {
           clearRight();
           document.querySelector(".users-list").classList.remove("d-none");
+          document
+            .querySelector(".users-list")
+            .classList.add("messages-list__active");
+          document
+            .querySelector(DOMstrings.groupContainer)
+            .classList.remove("messages-list__active");
         }
       }
     },
