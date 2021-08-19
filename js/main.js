@@ -299,7 +299,7 @@ var controller = (function (Cc, UIC) {
     init: function () {
       console.log("App started");
       setupEventListeners();
-    },
+    }
   };
 })(chatController, UIController);
 

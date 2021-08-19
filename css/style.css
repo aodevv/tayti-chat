@@ -383,10 +383,13 @@ body {
   border-radius: 50%;
 }
 .badge-online {
-  background-color: #06d6a0;
+  background-color: brown;
 }
 .badge-offline {
   background-color: #7a7f9a;
+}
+.badge-away {
+  background-color: aquamarine;
 }
 
 .dot {

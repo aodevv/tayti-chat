@@ -6,17 +6,17 @@
   color: $color-red-pink;
 }
 
-
-.badge{
-  width: .8rem;
-  height: .8rem;
+.badge {
+  width: 0.8rem;
+  height: 0.8rem;
   border-radius: 50%;
-  &-online{
-    background-color: $color-online;
+  &-online {
+    background-color: brown;
   }
-  &-offline{
+  &-offline {
     background-color: $color-grey-dark-2;
   }
-  
+  &-away {
+    background-color: aquamarine;
+  }
 }
-
